@@ -1,5 +1,7 @@
 # Event Streaming Utils library 1.0.0
 
+![status](https://api.travis-ci.org/rso-vaje-6315/lib-event-streaming-utils.svg)
+
 ## Deploy
 
 ```bash
