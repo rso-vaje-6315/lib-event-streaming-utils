@@ -14,7 +14,7 @@ script:
   - echo "SKIP TEST"
 
 after_success:
-  - mvn deploy -DskipTests=true --settings .ci/settings.xml -P rso
+  - mvn clean javadoc:jar source:jar deploy -DskipTests=true --settings .ci/settings.xml -P rso
 
 notifications:
   email: false
