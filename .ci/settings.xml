@@ -15,6 +15,9 @@
     <profiles>
         <profile>
             <id>rso</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <repositories>
                 <repository>
                     <id>rso-store</id>
