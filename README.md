@@ -2,36 +2,20 @@
 
 ![status](https://api.travis-ci.org/rso-vaje-6315/lib-event-streaming-utils.svg)
 
-## Deploy
-
-```bash
-mvn clean javadoc:jar source:jar deploy -P rso
-```
-
 ## Usage
 
 ### Creating event streaming message
 
-```java
-// 1. Create message
-EventStreamMessage message = EventStreamMessageBuilder
-    .getInstance()
-    .ofType("ORDER_FINISHED")
-    .withData(JacksonMapper.stringify(orderDetailsObject))
-    .build();
+TODO: add docs
 
-// 2. Encode message
-Optional<String> messageToBeSent = EventStreamMessageParser.encodeMessage(message);
+In the meantime look at [notification service](https://github.com/rso-vaje-6315/notification-service), which is RI.
 
-// ... Send message
+## Development
 
-// ... Receive message
+### Deployment
 
-// 3. Decode message
-Optional<EventStreamMessage> message = EventStreamMessageParser.decodeMessage(rawMessage);
-if (message.isPresent()) {
-    if (message.get().getType().equals("ORDER_FINISHED")) {
-        OrderDetails order = JacksonMapper.toEntity(message.get().getData(), OrderDetails.class);
-    }
-}
+To deploy snapshot version, simply execute:
+
+```bash
+mvn clean deploy -P rso
 ```
