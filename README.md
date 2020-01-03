@@ -70,6 +70,20 @@ public void onMessage(ConsumerRecord<String, EventStreamMessage> record) {
 }
 ```
 
+### Reference implementations
+
+**Producer example**
+
+[Producer class](https://github.com/rso-vaje-6315/invoice-service/blob/develop/services/src/main/java/si/rso/invoice/services/impl/NotificationServiceImpl.java)
+
+[config.yml](https://github.com/rso-vaje-6315/invoice-service/blob/develop/api/v1/src/main/resources/config.yml)
+
+**Consumer example**
+
+[Consumer class](https://github.com/rso-vaje-6315/notification-service/blob/develop/api/v1/src/main/java/si/rso/notifications/api/consumers/KafkaConsumer.java)
+
+[config.yml](https://github.com/rso-vaje-6315/notification-service/blob/develop/api/v1/src/main/resources/config.yml)
+
 ## Development
 
 ### Deployment
